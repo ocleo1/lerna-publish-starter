@@ -1,0 +1,60 @@
+{
+  "name": "@example/components",
+  "version": "0.0.1",
+  "description": "components",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:types && npm run build:cjs && npm run build:esm",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:cjs": "babel src --out-dir cjs --extensions \".ts,.tsx\" --config-file ./babel.cjs.json",
+    "build:esm": "babel src --out-dir esm --extensions \".ts,.tsx\" --config-file ./babel.esm.json",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --ext .ts,.tsx src",
+    "lint:fix": "eslint --fix --ext .ts,.tsx src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocleo1/lerna-publish-starter.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "files": [
+    "cjs",
+    "esm",
+    "types",
+    "styles",
+    "package.json",
+    "README.md"
+  ],
+  "author": "ocleo1",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16",
+    "typescript": ">4.5"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.22.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-typescript": "^7.21.5",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "core-js": "2.6.12",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "4.0.8",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@example/utils": "*"
+  }
+}

@@ -34,9 +34,6 @@
       "files": "**/*.+(ts|tsx)",
       "parser": "@typescript-eslint/parser",
       "rules": {
-        "@typescript-eslint/explicit-member-accessibility": ["warn", {
-          "accessibility": "explicit"
-        }],
         "arrow-body-style": "off",
         "comma-dangle": ["error", "never"],
         "space-before-function-paren": ["error", {

@@ -1,0 +1,12 @@
+{
+  "extends": "../../babel.base.json",
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "corejs": 2
+      }
+    ]
+  ]
+}
