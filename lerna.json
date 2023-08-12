@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": ["main", "release/*"],
+      "includeMergedTags": true
+    },
+    "publish": {
+      "registry": "https://registry.npmjs.org"
+    }
+  }
+}
